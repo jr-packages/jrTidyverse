@@ -12,9 +12,6 @@ r_packages:
 before_install:
   - tlmgr install fancyvrb units
 
-before_script:
-  - make
-
 after_success:
   - wget https://raw.githubusercontent.com/jr-packages/drat/master/deploy.sh
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
