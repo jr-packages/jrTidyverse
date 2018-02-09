@@ -36,3 +36,16 @@ NULL
 #'@examples
 #' data(stock_change)
 NULL
+
+#' School grade example
+#'
+#' Used for spread and gather examples
+#'
+#'@name School
+#'@docType data
+#'@usage data(School)
+#'@return A data frame
+#'@keywords datasets
+#'@examples
+#' data(School)
+NULL
