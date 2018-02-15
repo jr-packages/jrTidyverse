@@ -11,6 +11,14 @@
 #' data(example)
 NULL
 
+#' @name bond
+#' @title James Bond Data set
+#'
+#' @description Statistics from the James bond films
+#' @source http://www.knownman.com/james-bond-graph/
+#' @docType data
+NULL
+
 #' Stock prices example
 #'
 #' Used only for the dplyr joining example
