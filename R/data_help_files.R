@@ -49,3 +49,18 @@ NULL
 #'@examples
 #' data(School)
 NULL
+
+#' @name bond
+#' @title James Bond Data set
+#'
+#' @description Statistics from the James bond films
+#' @source http://www.knownman.com/james-bond-graph/
+#' @docType data
+NULL
+
+#' @name GoTRating
+#' @title Game of Thrones ratings
+#' @description Game of thrones TV ratings for every episode
+#' @docType data
+#' @format A data frame
+NULL
