@@ -11,6 +11,7 @@
 #' data(example)
 NULL
 
+
 #' Stock prices example
 #'
 #' Used only for the dplyr joining example
