@@ -1,3 +1,18 @@
+#' Game of Thrones Audience figures
+#'
+#' Taken from wikipedia. The data set \code{GoT_df} returns a
+#' data frame, whereas \code{GoT} returns a tibble.
+#'
+#'@name GoT
+#'@aliases GoT_df
+#'@docType data
+#'@return A tibble or data frame.
+#'@keywords datasets
+#'@examples
+#' data(GoT)
+#' data(GoT_df)
+NULL
+
 #' Example data frame data
 #'
 #' Used only for the introduction to data frames example
