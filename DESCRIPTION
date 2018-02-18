@@ -1,7 +1,7 @@
 Package: jrTidyverse
 Type: Package
 Title: Introduction to the Tidyverse
-Version: 0.1.0
+Version: 0.1.1
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse course.
@@ -10,7 +10,8 @@ Imports:
     tidyverse, 
     dplyr (>= 0.7.4),
     jrData,
-    ggplot2movies
+    ggplot2movies, 
+    readr
 Remotes:
     jr-packages/jrData
 Suggests: knitr
