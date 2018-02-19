@@ -6,6 +6,7 @@ Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse course.
 License: GPL-2
+Depends: R (>= 3.4.0)
 Imports:
     tidyverse, 
     dplyr (>= 0.7.4),
@@ -16,7 +17,7 @@ Imports:
     lubridate (>= 1.7.2)
 Remotes:
     jr-packages/jrData
-Suggests: knitr
+Suggests: knitr, okcupiddata
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true

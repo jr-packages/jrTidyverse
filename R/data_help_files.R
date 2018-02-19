@@ -13,17 +13,17 @@
 #' data(GoT_df)
 NULL
 
-#' Example data frame data
+#' OK Cupid data set
 #'
-#' Used only for the introduction to data frames example
+#' Data from ok cupid see https://github.com/rudeboybert/JSE_OkCupid
 #'
-#'@name example
+#'@name okcupid
 #'@docType data
-#'@usage data(example)
-#'@return A data frame
+#'@usage data(okcupid)
+#'@return A tibble
 #'@keywords datasets
 #'@examples
-#' data(example)
+#' data(okcupid)
 NULL
 
 
