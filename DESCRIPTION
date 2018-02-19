@@ -11,7 +11,9 @@ Imports:
     dplyr (>= 0.7.4),
     jrData,
     ggplot2movies, 
-    readr
+    readr, 
+    tibble (>= 1.4.2), 
+    lubridate (>= 1.7.2)
 Remotes:
     jr-packages/jrData
 Suggests: knitr

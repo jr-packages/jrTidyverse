@@ -1,4 +1,8 @@
 #' Return a tibble with different types
+#' @importFrom stats lm
+#' @importFrom utils data
+#' @importFrom tibble tibble
+#' @importFrom lubridate ymd
 #' @export
 get_tibble_types = function() {
   
