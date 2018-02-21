@@ -1,0 +1,19 @@
+---
+title: "Chapter 4 Practical Solutions"
+author: "Jumping Rivers"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{dplyr_solutions}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, setup, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = "show")
+```
+
+```{r, child = 'dplyr_contents.Rmd'}
+```
+

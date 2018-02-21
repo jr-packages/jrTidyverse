@@ -1,0 +1,19 @@
+---
+title: "Chapter 3 Practical"
+author: "Jumping Rivers"
+output: pdf_document
+vignette: >
+  %\VignetteIndexEntry{ggplot2_practical}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache= TRUE, results = "hide", fig.align = "center", fig.keep='none')
+```
+
+```{r, child = "ggplot2_contents.Rmd"}
+```
+

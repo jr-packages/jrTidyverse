@@ -1,0 +1,74 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+```{r, message = FALSE}
+library("dplyr")
+library("tidyr")
+library("ggplot2")
+data(okcupid, package = "jrTidyverse")
+```
+
+# tidyr: Getting started with `separate()`
+
+The original state of the okcupid data has numerous messy columns. Let's tidy some of them up. First, the location variable currently stores both the area and the state. We can separate it into two further variables using `separate()`
+
+```{r, echo = TRUE}
+okcupid = okcupid %>% 
+  separate(location, c("area", "state"), sep = ", ")
+```
+
+Notice the warning, R is just telling us that in one of the rows there was two commas and so there were three pieces of information. In this case it was the inclusion of country information on top of the area and state. Next up, ethnicity. In some cases people have listed 3 ethnicities per person. We are only interested in the first one (obviously for actual analysis this is not recommended as it a gross under representation of todays multi ethnic society). Again we can use separate to rid of everything after first ethnicity
+
+```{r, echo = TRUE}
+okcupid = okcupid %>% 
+  separate(ethnicity, "ethnicity", sep = ", ")
+```
+
+1. How many people put poor english as their first language (Hint: use `separate()` to separate the `speaks` variable into $3$ different columns then use `count()`)
+
+```{r, warning = FALSE}
+okcupid = okcupid %>% 
+  separate(speaks, c("first_lan", "sec_lan", "third_lan"), sep = ", ") 
+okcupid %>%
+  count(first_lan)
+# 168
+```
+
+2. How many people put the programming language c++ as their second language? Hint (apply another `separate()`
+operation on the column `sec_lan`)
+
+```{r, warning = FALSE}
+okcupid = okcupid %>% 
+  separate(sec_lan, "second_lan", sep = " ")
+```
+
+```{r}
+okcupid %>% 
+  count(second_lan) %>% 
+  filter(second_lan == "c++")
+```
+
+## Using `spread()`
+
+Long format data is great for us as R programmers as it is a convenient format for lots of things that we wish to do with our data. However it is not always the most useful way to share a table with others. An example of this might be as follows.
+
+The code
+
+```{r, echo = TRUE}
+(df = okcupid %>% 
+   group_by(sex) %>% 
+   count(orientation)
+ )
+```
+
+creates a data structure that works well for ggplot but is more difficult to read in a report.
+
+1. Use `spread()` to give a column for each orientation, filled with the counts. Does it look a bit nicer?
+
+```{r}
+df %>% 
+  spread(orientation, n)
+```
+

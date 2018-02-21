@@ -1,0 +1,20 @@
+---
+title: "Chapter 5 Practical "
+author: "Jumping Rivers"
+output: pdf_document
+vignette: >
+  %\VignetteIndexEntry{lubridate_practical}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE, results = "hide")
+```
+
+```{r child = "lubridate_contents.Rmd"}
+
+```
+

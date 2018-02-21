@@ -1,0 +1,20 @@
+---
+title: "Chapter 5 Practical Solutions "
+author: "Jumping Rivers"
+output: pdf_document
+vignette: >
+  %\VignetteIndexEntry{lubridate_solutions}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = "show")
+```
+
+```{r child = "lubridate_contents.Rmd"}
+
+```
+

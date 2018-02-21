@@ -1,0 +1,24 @@
+---
+title: "Chapter 6 Practical Solutions"
+author: "Jumping Rivers"
+output: pdf_document
+vignette: >
+  %\VignetteIndexEntry{tidyr_solutions}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, setup, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = "show")
+```
+
+```{r, child = "tidyr_content.Rmd"}
+
+```
+
+<!-- ## Practicals  -->
+
+<!-- ### Introduce OKcupid data  -->
+
