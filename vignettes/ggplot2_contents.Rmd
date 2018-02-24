@@ -59,7 +59,8 @@ g1
 g + geom_bar(aes(x = body_type))
 ```
 
-1. Change the axis labels to "Body Type" and "Total" by adding two more layers. Use the `xlab()` and `ylab()` functions. 
+1. Change the axis labels to "Body Type" and "Total" by adding two more layers, 
+using `+ xlab("Body Type")` and `+ ylab("Total")`
 
 ```{r, fig.keep='none'}
 g + geom_bar(aes(x = body_type)) + 
@@ -100,7 +101,7 @@ g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") +
 
 ## Box plots
 
-1. Box plots are a great way to visualise the shape of a distribution of some variable. Start by creating a boxplot of peoples ages in the `okcupid` data. The `x=1` in the code below lets us have just a single boxplot for all ages 
+1. Box plots are a great way to visualise the shape of a distribution of some variable. Start by creating a boxplot of peoples ages in the `okcupid` data. The `x = 1` in the code below lets us have just a single boxplot for all ages 
 
 ```{r, echo = TRUE, out.width="70%"}
 g = ggplot(okcupid) 
@@ -115,7 +116,7 @@ g + geom_boxplot(aes(x = smokes, y = age))
 
 ### Facetting
 
-3. Facetting is a mechanism by which we can recreate all layers in a plot, over another variable. For example we could take the boxplots from the previous question and recreate the same collection with a separate pane for each of the genders by adding a `facet_wrap(~sex)` layer. Give it a try.
+3. Facetting is a mechanism by which we can recreate all layers in a plot, over another variable. For example we could take the boxplots from the previous question and recreate the same collection with a separate pane for each of the genders by adding a `facet_wrap(~ sex)` layer. Give it a try.
 
 ```{r, out.width="70%"}
 g + geom_boxplot(aes(x = smokes, y = age)) + 

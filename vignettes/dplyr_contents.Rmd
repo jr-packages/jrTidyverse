@@ -11,8 +11,9 @@ In this section, we will gradually chain the commands together. We'll
 start things off, by calculating the average income
 
 ```{r, echo = TRUE}
-okcupid %>% 
+new_data = okcupid %>% 
   summarise(ave_income = mean(income))
+new_data
 ```
 
 1. Alter the above command to calculate the median income (as well as the mean).
@@ -23,22 +24,11 @@ okcupid %>%
             med_income = median(income))
 ```
 
-
-2. Using `filter()` and `is.na()` remove people who skipped the `pet` question before calculating the average income.
-
-```{r}
-okcupid %>%
-  filter(!is.na(pets)) %>%
-  summarise(ave_income = mean(income))
-```
-
-
-3. Use the `group_by()` to calculate the average incomes conditional on the answer
+2. Use the `group_by()` to calculate the average incomes conditional on the answer
 to the `pets` question.
 
 ```{r}
 okcupid %>%
-  filter(!is.na(pets)) %>%
   group_by(pets) %>%
   summarise(ave_income = mean(income))
 ```
@@ -55,7 +45,6 @@ to smallest in terms of average income.
 
 ```{r}
 (df = okcupid %>%
-  filter(!is.na(pets)) %>%
   group_by(pets) %>%
   summarise(ave_income = mean(income)) %>%
   arrange(desc(ave_income))
@@ -70,20 +59,6 @@ ggplot(df) +
   geom_col(aes(x = pets, y = ave_income)) + 
   coord_flip()
 ```
-
-
-<!-- XXX not sure if you intended to work through the above together or not but seemed weird having this by itself -->
-<!-- ## All by yourself -->
-
-<!-- 6. Calculate the average age in the OK Cupid data set, conditional on gender. This should take -->
-<!-- three lines of R code. -->
-
-<!-- ```{r} -->
-<!-- okcupid %>%  -->
-<!--   group_by(sex) %>% -->
-<!--   summarise(ave_age = mean(age)) -->
-<!-- ``` -->
-
 
 ## Creating columns with `mutate()`
 
@@ -110,7 +85,8 @@ okcupid %>%
   filter(income < quantile(income, probs = 0.95))
 ```
 
-3. To help with plotting, convert the `decade` column into a character (hint use `mutate()`)
+3. To help with plotting, convert the `decade` column into a character using the
+`as.character()` function. This can be achieved via `mutate(decade = as.character(decade))`
 
 ```{r}
 (df = okcupid %>%

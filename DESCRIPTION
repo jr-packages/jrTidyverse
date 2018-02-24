@@ -13,9 +13,11 @@ Imports:
     readr, 
     tibble (>= 1.4.2), 
     lubridate (>= 1.7.2), 
+    ggplot2movies,
+    hrbrthemes
 Remotes:
     jr-packages/jrData
-Suggests: knitr, okcupiddata, rmarkdown, ggplot2, ggplot2movies, jrData, tidyr
+Suggests: knitr, okcupiddata, rmarkdown, ggplot2, jrData, tidyr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
