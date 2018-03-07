@@ -100,14 +100,14 @@ g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") +
 
 ## Box plots
 
-1. Box plots are a great way to visualise the shape of a distribution of some variable. Start by creating a boxplot of peoples ages in the `okcupid` data. The `x = 1` in the code below lets us have just a single boxplot for all ages 
+Box plots are a great way to visualise the shape of a distribution of some variable. Start by creating a boxplot of peoples ages conditional on drinking
 
 ```{r, echo = TRUE, out.width="70%"}
 g = ggplot(okcupid) 
-g + geom_boxplot(aes(x = 1, y = age))
+g + geom_boxplot(aes(x = drinks, y = age))
 ```
 
-2. Switch out the `x = 1` for `x = smokes` to get a boxplot for each group
+2. Switch out the `x = drinks` for `x = smokes` to get a boxplot for each group
 
 ```{r}
 g + geom_boxplot(aes(x = smokes, y = age))
