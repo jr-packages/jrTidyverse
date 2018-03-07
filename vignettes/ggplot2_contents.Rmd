@@ -47,8 +47,7 @@ g1
     ```{r, fig.keep='none', echo = TRUE}
     g + geom_point(aes(x = age, y = height, colour = sex))
     ```
-    What happens if you change `alpha = sex`
-    
+
 5. Change `colour = sex` to `colour = height`. Why do you think there's a change in the legend?
 
 ## Bar plots

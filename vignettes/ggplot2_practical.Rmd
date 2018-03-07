@@ -4,8 +4,8 @@ author: "Jumping Rivers"
 output: pdf_document
 vignette: >
   %\VignetteIndexEntry{ggplot2_practical}
-  %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
 ---
