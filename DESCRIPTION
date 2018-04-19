@@ -1,12 +1,12 @@
 Package: jrTidyverse
 Type: Package
 Title: Introduction to the Tidyverse
-Version: 0.1.1
+Version: 0.1.3
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse course.
 License: GPL-2
-Depends: R (>= 3.4.0)
+Depends: R (>= 3.3.0)
 Imports:
     tidyverse, 
     dplyr (>= 0.7.4),
