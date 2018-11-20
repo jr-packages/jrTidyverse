@@ -1,0 +1,116 @@
+As usual, let's load the packages and data needed for this practical.
+
+```{r, message=FALSE, echo = TRUE}
+library("dplyr")
+library("lubridate")
+data(okcupid, package = "jrTidyverse")
+```
+
+## When were you born? (you can lie if you want to)
+
+1. Store your birth date as a character variable i.e.
+
+    ```{r, echo = TRUE}
+    bday = "11/04/1967"
+    ```
+
+2. Convert it into a date object using  `dmy`
+
+    ```{r}
+    bday = dmy(bday)
+    ```
+
+3. Which day of the week were you born on? Hint: Use `wday()`. Notice R returns the weekday as a number. To clarify this, set the argument `label` equal to `TRUE` inside `wday`. 
+
+    ```{r}
+    wday(bday, label = TRUE)
+    ```
+
+4. Using the `year()` function, change the year of your date object to your next birthday. What day is that on?
+
+```{r}
+year(bday) = 2018
+wday(bday, label = TRUE)
+```
+
+5. How many days is it until your next birthday? What about seconds since you were born? Hint: Use `interval` then use the `unit` argument inside `as.period()`
+
+```{r}
+today = today()
+as.period(interval(today, bday), unit = "year")
+as.period(interval(today, bday), unit = "day")
+as.period(interval(today, bday), unit = "seconds")
+```
+
+## OKCupid
+
+Take our OKcupid data, let's say we want to look at the distribution of the weekday of people's last online time. Effectively asking the question "Which day of the week do people use OKCupid most on?"
+
+1. Using `mutate()` and `ymd_hms()` convert the `last_online` column to a proper date. Hint, remember to set
+the time zone in the `ymd_hms()` via `tz = "America/Los_Angeles"`.
+
+```{r}
+okcupid = okcupid %>%
+  mutate(last_online = ymd_hms(last_online, tz = "America/Los_Angeles"))
+```
+
+2. Create a new column called `week_day` that contains the day of the week a user accessed OKCupid. Hint: use `mutate()`
+and `wday()`
+
+```{r}
+okcupid = okcupid %>%
+    mutate(week_day = wday(last_online, label = TRUE))
+```
+
+3. Which day of the week is most common?
+
+```{r}
+okcupid %>% 
+  count(week_day)
+```
+
+<!-- 3. Create a bar chart of the day of the week using `geom_bar()`. Which days are most popular? -->
+
+<!-- ```{r, fig.keep="none"} -->
+<!-- ggplot(okcupid, aes(x = week_day)) +  -->
+<!--   geom_bar() + -->
+<!--   xlab("Week day") + -->
+<!--   ylab("Count") -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- # friday and saturday are the two most popular -->
+<!-- ``` -->
+
+<!-- 4. How does this compare for men and women? -->
+
+<!-- ```{r, fig.keep="none"} -->
+
+<!-- # either use a graph to find out -->
+<!-- ggplot(okcupid, aes(x = week_day)) +  -->
+<!--   geom_bar() + -->
+<!--   xlab("Week day") + -->
+<!--   ylab("Count") +  -->
+<!--   facet_wrap(~sex) -->
+
+<!-- # or a summary data frame -->
+
+<!-- okcupid %>%  -->
+<!--   group_by(sex) %>%  -->
+<!--   count(week_day) -->
+<!-- ``` -->
+
+<!-- 5. Create a bar chart showing the distribution for the hour of the day okcupid users were last online? You  -->
+<!-- should end up with something like the figure below -->
+
+<!-- ```{r} -->
+<!-- okcupid = okcupid  %>% -->
+<!--     mutate(lo_hour = hour(last_online)) -->
+<!-- ``` -->
+
+<!-- ```{r, echo= FALSE, fig.width=6, out.width="70%", fig.align="center", fig.asp = 0.618, fig.cap="Distribution of access times."} -->
+<!-- ggplot(okcupid, aes(x = lo_hour)) + -->
+<!--   geom_bar() + -->
+<!--   xlab("Hour of the day") + -->
+<!--   ylab("Count") -->
+<!-- ``` -->

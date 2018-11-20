@@ -1,9 +1,9 @@
 ---
-title: "tidyr Practical"
+title: "tidyr Practical Solutions"
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{tidyr_practical}
+  %\VignetteIndexEntry{solutions3v2}
   \usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -11,10 +11,10 @@ editor_options:
 ---
 
 ```{r, setup, echo = FALSE}
-knitr::opts_chunk$set(echo = FALSE, results = "hide", fig.keep="none")
+knitr::opts_chunk$set(echo = TRUE, results = "show")
 ```
 
-```{r, child = "tidyr_content.Rmd"}
+```{r, child = "practical3v2_content.Rmd"}
 
 ```
 

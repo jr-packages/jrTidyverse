@@ -1,20 +1,19 @@
 ---
-title: "lubridate Practical Solutions "
+title: "dplyr Practical Solutions"
 author: "Jumping Rivers"
-output: pdf_document
+output: rmarkdown::pdf_document
 vignette: >
-  %\VignetteIndexEntry{lubridate_solutions}
+  %\VignetteIndexEntry{solutions1v2}
   \usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
 ---
 
-```{r setup, echo = FALSE}
+```{r, setup, echo = FALSE}
 knitr::opts_chunk$set(echo = TRUE, results = "show")
 ```
 
-```{r child = "lubridate_contents.Rmd"}
-
+```{r, child = 'practical1v2_contents.Rmd'}
 ```
 

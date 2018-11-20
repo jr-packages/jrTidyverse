@@ -3,7 +3,7 @@ title: "lubridate Practical Solutions "
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{lubridate_solutions}
+  %\VignetteIndexEntry{solutions2v2}
   \usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -14,7 +14,7 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE, results = "show")
 ```
 
-```{r child = "lubridate_contents.Rmd"}
+```{r child = "practical2v2_contents.Rmd"}
 
 ```
 

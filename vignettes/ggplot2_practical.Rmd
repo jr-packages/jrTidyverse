@@ -1,5 +1,5 @@
 ---
-title: "Chapter 3 Practical"
+title: "ggplot2 Practical"
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >

@@ -51,14 +51,14 @@ to smallest in terms of average income.
 )
 ```
 
-5. Using __ggplot2__ and `geom_col()` plot your results. Hint use `+ coord_flip()` to rotate
-your plot.
+<!-- 5. Using __ggplot2__ and `geom_col()` plot your results. Hint use `+ coord_flip()` to rotate -->
+<!-- your plot. -->
 
-```{r}
-ggplot(df) +
-  geom_col(aes(x = pets, y = ave_income)) +
-  coord_flip()
-```
+<!-- ```{r} -->
+<!-- ggplot(df) +  -->
+<!--   geom_col(aes(x = pets, y = ave_income)) +  -->
+<!--   coord_flip() -->
+<!-- ``` -->
 
 ## Creating columns with `mutate()`
 
@@ -97,18 +97,18 @@ okcupid %>%
 ```
 
 
-4. Use __ggplot2__ to create boxplots of `x = decade` and `y = income`.
+<!-- 4. Use __ggplot2__ to create boxplots of `x = decade` and `y = income`. -->
 
-```{r}
-ggplot(df) +
-  geom_boxplot(aes(x = decade, y = income))
-```
+<!-- ```{r} -->
+<!-- ggplot(df) +  -->
+<!--   geom_boxplot(aes(x = decade, y = income)) -->
+<!-- ``` -->
 
-5. Create facets by using `+ facet_wrap(~ drugs)`
+<!-- 5. Create facets by using `+ facet_wrap(~ drugs)` -->
 
-```{r}
-ggplot(df) +
-  geom_boxplot(aes(x = decade, y = income)) +
-  facet_wrap(~drugs)
-```
+<!-- ```{r} -->
+<!-- ggplot(df) +  -->
+<!--   geom_boxplot(aes(x = decade, y = income)) +  -->
+<!--   facet_wrap(~drugs) -->
+<!-- ``` -->
 

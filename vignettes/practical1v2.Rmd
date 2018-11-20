@@ -3,9 +3,9 @@ title: "dplyr Practical"
 author: "Jumping Rivers"
 output: rmarkdown::pdf_document
 vignette: >
-  %\VignetteIndexEntry{dplyr_practical}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{practical1v2}
   \usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
 ---
@@ -14,6 +14,6 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE, results = "hide", fig.keep = 'none')
 ```
 
-```{r, child = 'dplyr_contents.Rmd'}
+```{r, child = 'practical1v2_contents.Rmd'}
 ```
 

@@ -1,9 +1,9 @@
 ---
-title: "lubridate Practical Solutions "
+title: "lubridate Practical "
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{lubridate_solutions}
+  %\VignetteIndexEntry{practical2v2}
   \usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -11,10 +11,10 @@ editor_options:
 ---
 
 ```{r setup, echo = FALSE}
-knitr::opts_chunk$set(echo = TRUE, results = "show")
+knitr::opts_chunk$set(echo = FALSE, results = "hide")
 ```
 
-```{r child = "lubridate_contents.Rmd"}
+```{r child = "practical2v2_contents.Rmd"}
 
 ```
 

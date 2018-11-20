@@ -1,11 +1,11 @@
 ---
-title: "Chapter 5 Practical "
+title: "lubridate Practical "
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
   %\VignetteIndexEntry{lubridate_practical}
-  %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
 ---

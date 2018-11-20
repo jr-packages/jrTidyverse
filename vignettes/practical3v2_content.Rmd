@@ -52,22 +52,14 @@ okcupid %>%
 
 3. Use `separate()` to extract a persons religion, given that a persons religion is always stated as the first word in the column "religion". 
 ```{r, warning = FALSE}
-okcupid %>% 
-  separate(religion, c("religion"), sep = " ") %>% 
-  count(religion) %>% 
-  ggplot(aes(x = religion, y = n)) +
-  geom_col() + 
-  coord_flip()
+okcupid = okcupid %>% 
+  separate(religion, c("religion"), sep = " ") 
 ```
 
-4. Tally up the religions in the data set and plot them
+4. Which religion is the most commmon?
 ```{r, warning = FALSE}
-okcupid %>% 
-  separate(religion, c("religion"), sep = " ") %>% 
-  count(religion) %>% 
-  ggplot(aes(x = religion, y = n)) +
-  geom_col() + 
-  coord_flip()
+okcupid %>%
+  count(religion) 
 ```
 
 ## Using `spread()`

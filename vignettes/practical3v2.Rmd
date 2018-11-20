@@ -3,7 +3,7 @@ title: "tidyr Practical"
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{tidyr_practical}
+  %\VignetteIndexEntry{practical3v2}
   \usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -14,7 +14,7 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE, results = "hide", fig.keep="none")
 ```
 
-```{r, child = "tidyr_content.Rmd"}
+```{r, child = "practical3v2_content.Rmd"}
 
 ```
 

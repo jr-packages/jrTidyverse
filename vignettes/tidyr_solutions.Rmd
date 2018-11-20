@@ -1,11 +1,11 @@
 ---
-title: "Chapter 6 Practical Solutions"
+title: "tidyr Practical Solutions"
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
   %\VignetteIndexEntry{tidyr_solutions}
-  %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
 ---
