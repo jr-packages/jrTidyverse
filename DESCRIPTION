@@ -1,7 +1,7 @@
 Package: jrTidyverse
 Type: Package
 Title: Introduction to the Tidyverse
-Version: 0.1.4
+Version: 0.1.5
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse course.
@@ -18,8 +18,8 @@ Imports:
     wordcloud
 Remotes:
     jr-packages/jrData
-Suggests: knitr, gutenbergr, rmarkdown, ggplot2
+Suggests: knitr, gutenbergr, rmarkdown, ggplot2, testthat, lintr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1

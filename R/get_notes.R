@@ -5,5 +5,5 @@
 #' @importFrom utils browseURL
 #' @export
 get_notes = function() {
-  browseURL(system.file("main.pdf",package = "jrTidyverse"))
+  browseURL(system.file("main.pdf", package = "jrTidyverse"))
 }

@@ -1,0 +1,6 @@
+linters: with_defaults(
+    assignment_linter = NULL, # 20
+    NULL
+  )
+exclusions: list("R/get_tibble_types.R",
+                  "R/make_ok_cupid.R")
