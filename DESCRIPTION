@@ -15,7 +15,8 @@ Imports:
     lubridate (>= 1.7.2), 
     ggplot2movies,
     hrbrthemes,
-    wordcloud
+    wordcloud, 
+    tidyr
 Remotes:
     jr-packages/jrData
 Suggests: knitr, gutenbergr, rmarkdown, ggplot2, testthat, lintr
