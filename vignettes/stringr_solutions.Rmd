@@ -1,0 +1,18 @@
+---
+title: "Stringr Solutions"
+author: "Jumping Rivers"
+output: pdf_document
+vignette: >
+  %\VignetteIndexEntry{stringr_solutions}
+  \usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache= TRUE, results = "show", fig.align = "center", fig.keep='all')
+```
+
+```{r, child = "stringr_contents.Rmd"}
+```

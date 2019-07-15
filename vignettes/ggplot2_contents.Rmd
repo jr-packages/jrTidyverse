@@ -107,7 +107,7 @@ g = ggplot(okcupid)
 g + geom_boxplot(aes(x = drinks, y = age))
 ```
 
-2. Switch out the `x = drinks` for `x = smokes` to get a boxplot for each group
+1. Switch out the `x = drinks` for `x = smokes` to get a boxplot for each group
 
 ```{r}
 g + geom_boxplot(aes(x = smokes, y = age))
@@ -115,14 +115,14 @@ g + geom_boxplot(aes(x = smokes, y = age))
 
 ### Facetting
 
-3. Facetting is a mechanism by which we can recreate all layers in a plot, over another variable. For example we could take the boxplots from the previous question and recreate the same collection with a separate pane for each of the genders by adding a `facet_wrap(~ sex)` layer. Give it a try.
+2. Facetting is a mechanism by which we can recreate all layers in a plot, over another variable. For example we could take the boxplots from the previous question and recreate the same collection with a separate pane for each of the genders by adding a `facet_wrap(~ sex)` layer. Give it a try.
 
 ```{r, out.width="70%"}
 g + geom_boxplot(aes(x = smokes, y = age)) + 
   facet_wrap(~sex)
 ```
 
-4. Facetting allows quick creation of visualisations that examine multiple properties of a data set. Take the final plot from the bar charts section above and facet on orientation
+3. Facetting allows quick creation of visualisations that examine multiple properties of a data set. Take the final plot from the bar charts section above and facet on orientation
 
 ```{r}
 g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") + 

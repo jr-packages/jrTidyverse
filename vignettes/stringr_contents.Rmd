@@ -1,0 +1,83 @@
+Some of the questions in this practical might not exactly be things you would do in the real world, they are just intended to get you comfortable using some of the **stringr** functions you have seen so far.
+
+## Question 1
+
+We'll start by loading the necessary packages and data sets
+```{r, message=FALSE, echo = TRUE}
+library("tidyverse")
+data(names, package = "jrTidyverse")
+```
+
+Here we have a data set containing 800 people with the names: "Abigail", "Alexander", "Ava", "Benjamin", "Charlotte", "Emily", "Emma", "Ethan", "Harper", "Isabella", "Jacob", "James", "Liam", "Mason", "Mia", "Michael", "Noah", "Olivia", "Sophia" and "William".      
+
+<!-- # ```{r, results='asis', echo=FALSE} -->
+<!-- # names %>%  -->
+<!-- #   mutate(name = str_trim(name)) %>%  -->
+<!-- #   mutate(name = str_to_title(name)) %>%  -->
+<!-- #   unique() %>%  -->
+<!-- #   pull(name) %>%  -->
+<!-- #   str_sort() -->
+<!-- # ``` -->
+
+
+Using various functions from **stringr** and `count()` from **dplyr**, work out the frequency of each name. Which name occcurs the most?
+```{r}
+names %>% 
+  mutate(name = str_trim(name)) %>% 
+  mutate(name = str_to_title(name)) %>% 
+  count(name) %>% 
+  arrange(n)
+```
+
+## Question 2: Movies
+
+We'll start off by loading the data 
+```{r, echo = TRUE}
+data(movies, package = "jrTidyverse")
+```
+
+1. How many movie titles contain the word "The" ?
+```{r}
+length(str_subset(movies$title, pattern = "The"))
+```
+
+2. Do any titles contain your name?
+```{r}
+# not for me!
+str_subset("movies$title", pattern = "Theo")
+```
+
+3. Mutate a new column that is the count of how many characters each movie title contains, call this new column `title_length`
+```{r}
+movies = movies %>% 
+  mutate(title_length = str_count(title))
+```
+
+4. How many characters does the longest title contain? Hint: Use `summarise()` and `max()`
+```{r}
+movies %>% 
+  summarise(max(title_length))
+```
+
+5. Which film has the longest title?
+```{r}
+movies %>% 
+  filter(title_length == max(title_length)) %>% 
+  select(title)
+```
+
+5. Use **ggplot2** to produce a histogram of the title lengths
+
+```{r, message = FALSE}
+movies %>% 
+  ggplot(aes(x = title_length)) + 
+  geom_histogram()
+```
+
+6. Produce a scatter plot of title length against rating, do you think longer title effect the rating?
+
+```{r}
+movies %>% 
+  ggplot(aes(x = title_length, y = rating)) + 
+  geom_point()
+```

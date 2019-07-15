@@ -16,10 +16,12 @@ Imports:
     ggplot2movies,
     hrbrthemes,
     wordcloud, 
-    tidyr
+    tidyr, 
+    ggplot2, 
+    plotly
 Remotes:
     jr-packages/jrData
-Suggests: knitr, gutenbergr, rmarkdown, ggplot2, testthat, lintr
+Suggests: knitr, gutenbergr, rmarkdown, testthat, lintr, gridExtra
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
