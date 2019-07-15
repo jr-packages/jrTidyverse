@@ -128,3 +128,16 @@ NULL
 #' @examples
 #' data(movies)
 NULL
+
+#' Messed up names
+#'
+#' We asked children with 20 different names to type their name.
+#'
+#'@name names
+#'@docType data
+#'@return A data frame
+#'@usage data(names)
+#'@keywords datasets
+#'@examples
+#' data(names)
+NULL
