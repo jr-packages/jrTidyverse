@@ -1,24 +1,20 @@
 ---
-title: "tidyr Practical Solutions"
+title: "lubridate Practical Solutions "
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{solutions3v2}
+  %\VignetteIndexEntry{lubridate_solutions}
   \usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
 ---
 
-```{r, setup, echo = FALSE}
+```{r setup, echo = FALSE}
 knitr::opts_chunk$set(echo = TRUE, results = "show")
 ```
 
-```{r, child = "practical3v2_content.Rmd"}
+```{r child = "practical3_contents.Rmd"}
 
 ```
-
-<!-- ## Practicals  -->
-
-<!-- ### Introduce OKcupid data  -->
 

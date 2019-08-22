@@ -14,7 +14,7 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE, results = "hide")
 ```
 
-```{r child = "lubridate_contents.Rmd"}
+```{r child = "practical3_contents.Rmd"}
 
 ```
 

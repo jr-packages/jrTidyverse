@@ -1,9 +1,9 @@
 ---
-title: "Stringr Solutions"
+title: "Stringr Practical"
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{stringr_solutions}
+  %\VignetteIndexEntry{stringr_practical}
   \usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -11,8 +11,8 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache= TRUE, results = "show", fig.align = "center", fig.keep='all')
+knitr::opts_chunk$set(echo = FALSE, cache= TRUE, results = "hide", fig.align = "center", fig.keep='none')
 ```
 
-```{r, child = "stringr_contents.Rmd"}
+```{r, child = "practical4_contents.Rmd"}
 ```
