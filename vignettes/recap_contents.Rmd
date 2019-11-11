@@ -32,15 +32,15 @@ filter(example, respond)
 We can pass outputs to the first argument of the next function using the piping operator, `%>%`
 ```{r, echo = TRUE, results='show'}
 # Give me the average age of males
-example %>% 
-  filter(gender == "Male") %>% 
+example %>%
+  filter(gender == "Male") %>%
   summarise(av_age = mean(age))
 ```
 
 3. Grab the average age of the people who didn't respond
 ```{r}
-example %>% 
-  filter(!respond) %>% 
+example %>%
+  filter(!respond) %>%
   summarise(av_age = mean(age))
 ```
 
@@ -48,7 +48,7 @@ example %>%
 The piping operator can be used in any functions, not just **dplyr**
 ```{r, echo = TRUE, results='show'}
 # Pass 1:5 on the left as the first argument to mean
-1:5 %>% 
+1:5 %>%
   mean(na.rm = TRUE)
 # Explicitly pass 1:5 into the function
 mean(1:5, na.rm = TRUE)
@@ -57,15 +57,15 @@ mean(1:5, na.rm = TRUE)
 We can apply functions to groups within variables using `group_by()`
 ```{r, echo = TRUE, results='show'}
 # Give me the average age of each group within gender
-example %>% 
-  group_by(gender) %>% 
+example %>%
+  group_by(gender) %>%
   summarise(av_age = mean(age))
 ```
 
 5. Grab the average age of each grouping within respond
 ```{r}
-example %>% 
-  group_by(respond) %>% 
+example %>%
+  group_by(respond) %>%
   summarise(av_age = mean(age))
 
 ```
@@ -90,17 +90,17 @@ Notice we can save plots as variables.
 Then to add information onto the graph we use geoms
 ```{r, eval = FALSE, message = FALSE, warning = FALSE, echo = TRUE, results='show', fig.keep='all'}
 # figure 2.2
-g + 
+g +
   geom_point()
 ggplot(movies, aes(x = rating)) +
   geom_histogram()
 ggplot(movies, aes(x = classification)) +
   geom_bar()
 ggplot(movies, aes(x = classification, y = rating)) +
-  geom_boxplot())
+  geom_boxplot()
 ```
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=6, fig.width=6, fig.cap = "Examples of different geoms", fig.keep='all', eval = TRUE, results="show"}
-a = g + 
+a = g +
   geom_point()
 b = ggplot(movies, aes(x = rating)) +
   geom_histogram()
@@ -108,23 +108,23 @@ c = ggplot(movies, aes(x = classification)) +
   geom_bar()
 d = ggplot(movies, aes(x = classification, y = rating)) +
   geom_boxplot()
-gridExtra::grid.arrange(a,b,c,d, ncol = 2, nrow = 2)
+gridExtra::grid.arrange(a, b, c, d, ncol = 2, nrow = 2)
 ```
 
 1. Using **dplyr**, work out the average rating for each year of movies in the data set. 
 ```{r}
-movies %>% 
-  group_by(year) %>% 
+movies %>%
+  group_by(year) %>%
   summarise(av_rat = mean(rating))
 ```
 
 2. Use **ggplot2** to plot a line graph of the year against average rating. 
 **Hint:** Use `geom_line()`
 ```{r}
-movies %>% 
-  group_by(year) %>% 
-  summarise(av_rat = mean(rating)) %>% 
-  ggplot(aes(x = year, y = av_rat)) + 
+movies %>%
+  group_by(year) %>%
+  summarise(av_rat = mean(rating)) %>%
+  ggplot(aes(x = year, y = av_rat)) +
   geom_line()
 ```
 
@@ -135,7 +135,7 @@ movies %>%
   summarise(av_rat = mean(rating)) %>%
   ggplot(aes(x = year, y = av_rat)) +
   geom_line() +
-  labs(x = "Year", 
-       y = "Average Rating", 
+  labs(x = "Year",
+       y = "Average Rating",
        title = "Average rating per year of movies")
 ```

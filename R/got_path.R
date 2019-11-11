@@ -1,5 +1,5 @@
 #' Game of Thrones CSV Path
-#' 
+#'
 #' Returns the path to the Game of thrones data set.
 #' @export
 #' @importFrom readr read_csv

@@ -11,7 +11,8 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache= TRUE, results = "hide", fig.align = "center", fig.keep='none')
+knitr::opts_chunk$set(echo = FALSE, cache = FALSE,
+                      results = "hide", fig.align = "center", fig.keep = "none")
 ```
 
 ```{r, child = "recap_contents.Rmd"}
