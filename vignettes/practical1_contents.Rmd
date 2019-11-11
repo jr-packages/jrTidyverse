@@ -24,7 +24,7 @@ okcupid %>%
             med_income = median(income))
 ```
 
-2. Use the `group_by()` to calculate the average incomes conditional on the answer
+2. Use the `group_by()` to calculate the mean income conditional on the answer
 to the `pets` question.
 
 ```{r}
@@ -41,7 +41,7 @@ okcupid %>%
       arrange(ave_income)
     ```
   will arrange the tibble from smallest to largest. Arrange the tibble from __largest__
-to smallest in terms of average income.
+to smallest in terms of average income. Remember, you can look up the help page using `?arrange`.
 
 ```{r}
 (df = okcupid %>%
@@ -77,7 +77,7 @@ ggplot(df) +
 
 2. Since this data set has high earners, use `filter()` to remove the 
 top 5\% of earners. Hint: `quantile(income, probs = 0.95)` will give you the 
-95\%-tile  of income
+95\%-tile  of income. 
 
 ```{r}
 okcupid %>%
