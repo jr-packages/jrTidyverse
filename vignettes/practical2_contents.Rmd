@@ -88,7 +88,7 @@ creates a data structure that works well for **ggplot** but is more difficult to
 1. Use `pivot_wider()` to give a column for each orientation, filled with the counts. Does it look a bit nicer?
 
 ```{r}
-df %>% 
+df %>%
   pivot_wider(names_from = orientation, values_from = n)
 ```
 
