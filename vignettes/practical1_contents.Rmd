@@ -11,7 +11,7 @@ In this section, we will gradually chain the commands together. We'll
 start things off, by calculating the average income
 
 ```{r, echo = TRUE}
-new_data = okcupid %>% 
+new_data = okcupid %>%
   summarise(ave_income = mean(income))
 new_data
 ```
@@ -19,7 +19,7 @@ new_data
 1. Alter the above command to calculate the median income (as well as the mean).
 
 ```{r}
-okcupid %>% 
+okcupid %>%
   summarise(ave_income = mean(income),
             med_income = median(income))
 ```
@@ -64,15 +64,15 @@ ggplot(df) +
 
 1. The `floor()` function rounds down to the nearest integer. To round to the nearest $10$, we use the trick
     ```{r, echo=TRUE}
-    floor(61/10)*10
-    floor(119/10)*10
+    floor(61 / 10) * 10
+    floor(119 / 10) * 10
     ```
   We can use the `mutate()` function to create a new column that contains the persons
   age (to the decade), i.e. 50, 60, 70, etc.  The `mutate()` function isn't directly in the notes, but it is relatively easy to understand. It creates a new column with the given name, based on manipulation of existing columns. So we could create this new column `decade`.
 
     ```{r, echo = TRUE}
     okcupid %>%
-      mutate(decade = floor(age/10) * 10)
+      mutate(decade = floor(age / 10) * 10)
     ```
 
 2. Since this data set has high earners, use `filter()` to remove the 
@@ -81,7 +81,7 @@ top 5\% of earners. Hint: `quantile(income, probs = 0.95)` will give you the
 
 ```{r}
 okcupid %>%
-  mutate(decade = floor(age/10)*10) %>%
+  mutate(decade = floor(age / 10) * 10) %>%
   filter(income < quantile(income, probs = 0.95))
 ```
 
@@ -90,7 +90,7 @@ okcupid %>%
 
 ```{r}
 (df = okcupid %>%
-  mutate(decade = floor(age/10)*10) %>%
+  mutate(decade = floor(age / 10) * 10) %>%
   filter(income < quantile(income, probs = 0.95)) %>%
   mutate(decade = as.character(decade))
 )

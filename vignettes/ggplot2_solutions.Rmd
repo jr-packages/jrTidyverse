@@ -4,14 +4,14 @@ author: "Jumping Rivers"
 output: pdf_document
 vignette: >
   %\VignetteIndexEntry{ggplot2_solutions}
-  %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache= TRUE, results = "show")
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE, results = "show")
 ```
 
 ```{r, child = "ggplot2_contents.Rmd"}

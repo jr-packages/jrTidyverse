@@ -11,14 +11,8 @@ editor_options:
 ---
 
 ```{r, setup, echo = FALSE}
-knitr::opts_chunk$set(echo = FALSE, results = "hide", fig.keep="none")
+knitr::opts_chunk$set(echo = FALSE, results = "hide", fig.keep = "none")
 ```
 
 ```{r, child = "practical2_contents.Rmd"}
-
 ```
-
-<!-- ## Practicals  -->
-
-<!-- ### Introduce OKcupid data  -->
-

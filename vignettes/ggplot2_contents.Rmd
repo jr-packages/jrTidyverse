@@ -20,7 +20,7 @@ data(okcupid, package = "jrTidyverse")
 
 ```{r, fig.keep='none', echo = TRUE}
 # alpha makes the points transparent
-ggplot(data = okcupid) + 
+ggplot(data = okcupid) +
   geom_point(aes(x = age, y = height), alpha = 0.2)
 ```
 
@@ -62,8 +62,8 @@ g + geom_bar(aes(x = body_type))
 using `+ xlab("Body Type")` and `+ ylab("Total")`
 
 ```{r, fig.keep='none'}
-g + geom_bar(aes(x = body_type)) + 
-  xlab("Body Type") + 
+g + geom_bar(aes(x = body_type)) +
+  xlab("Body Type") +
   ylab("Total")
 ```
 
@@ -77,14 +77,15 @@ g + geom_bar(aes(x = body_type, colour = sex, fill = sex))
 3. With such long labels, it might make more sense to rotate the graph such that the bars and labels are horizontal. Switch the `x` and `y` axes using a `coord_flip()` layer added to your graph.
 
 ```{r, fig.keep='none'}
-g + geom_bar(aes(x = body_type, colour = sex, fill = sex)) + 
+g + geom_bar(aes(x = body_type, colour = sex, fill = sex)) +
   coord_flip()
 ```
 
 4. I am not too keen on how the female and male bars are displayed on top of each other. The argument to change these is `position`.  The default is `stack`, for example we can put the bars next to each other using 
 
     ```{r, fig.keep='none', echo = TRUE}
-    g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "dodge") + 
+    g + geom_bar(aes(x = body_type, colour = sex, fill = sex),
+                 position = "dodge") +
       coord_flip()
     ```
 
@@ -93,7 +94,7 @@ g + geom_bar(aes(x = body_type, colour = sex, fill = sex)) +
 5. What does the `fill` position argument do?
 
 ```{r, fig.keep = "none"}
-g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") + 
+g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") +
   coord_flip()
 # puts the values on a common scale (all sum to 1)
 ```
@@ -103,7 +104,7 @@ g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") +
 Box plots are a great way to visualise the shape of a distribution of some variable. Start by creating a boxplot of peoples ages conditional on drinking
 
 ```{r, echo = TRUE, out.width="70%"}
-g = ggplot(okcupid) 
+g = ggplot(okcupid)
 g + geom_boxplot(aes(x = drinks, y = age))
 ```
 
@@ -118,15 +119,15 @@ g + geom_boxplot(aes(x = smokes, y = age))
 2. Facetting is a mechanism by which we can recreate all layers in a plot, over another variable. For example we could take the boxplots from the previous question and recreate the same collection with a separate pane for each of the genders by adding a `facet_wrap(~ sex)` layer. Give it a try.
 
 ```{r, out.width="70%"}
-g + geom_boxplot(aes(x = smokes, y = age)) + 
+g + geom_boxplot(aes(x = smokes, y = age)) +
   facet_wrap(~sex)
 ```
 
 3. Facetting allows quick creation of visualisations that examine multiple properties of a data set. Take the final plot from the bar charts section above and facet on orientation
 
 ```{r}
-g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") + 
-  coord_flip() + 
+g + geom_bar(aes(x = body_type, colour = sex, fill = sex), position = "fill") +
+  coord_flip() +
   facet_wrap(~ orientation)
 ```
 

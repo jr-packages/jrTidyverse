@@ -22,10 +22,10 @@ Here we have a data set containing 800 people with the names: "Abigail", "Alexan
 
 Using various functions from **stringr** and `count()` from **dplyr**, work out the frequency of each name. Which name occcurs the most?
 ```{r}
-names %>% 
-  mutate(name = str_trim(name)) %>% 
-  mutate(name = str_to_title(name)) %>% 
-  count(name) %>% 
+names %>%
+  mutate(name = str_trim(name)) %>%
+  mutate(name = str_to_title(name)) %>%
+  count(name) %>%
   arrange(n)
 ```
 
@@ -49,35 +49,35 @@ str_subset("movies$title", pattern = "Theo")
 
 3. Mutate a new column that is the count of how many characters each movie title contains, call this new column `title_length`
 ```{r}
-movies = movies %>% 
+movies = movies %>%
   mutate(title_length = str_count(title))
 ```
 
 4. How many characters does the longest title contain? Hint: Use `summarise()` and `max()`
 ```{r}
-movies %>% 
+movies %>%
   summarise(max(title_length))
 ```
 
 5. Which film has the longest title?
 ```{r}
-movies %>% 
-  filter(title_length == max(title_length)) %>% 
+movies %>%
+  filter(title_length == max(title_length)) %>%
   select(title)
 ```
 
 5. Use **ggplot2** to produce a histogram of the title lengths
 
 ```{r, message = FALSE}
-movies %>% 
-  ggplot(aes(x = title_length)) + 
+movies %>%
+  ggplot(aes(x = title_length)) +
   geom_histogram()
 ```
 
 6. Produce a scatter plot of title length against rating, do you think longer title effect the rating?
 
 ```{r}
-movies %>% 
-  ggplot(aes(x = title_length, y = rating)) + 
+movies %>%
+  ggplot(aes(x = title_length, y = rating)) +
   geom_point()
 ```

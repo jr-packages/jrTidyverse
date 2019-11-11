@@ -66,7 +66,7 @@ okcupid = okcupid %>%
 3. Create a bar chart of the day of the week using `geom_bar()`. Which days are most popular?
 
 ```{r, fig.keep="none"}
-ggplot(okcupid, aes(x = week_day)) + 
+ggplot(okcupid, aes(x = week_day)) +
   geom_bar() +
   xlab("Week day") +
   ylab("Count")
@@ -81,16 +81,16 @@ ggplot(okcupid, aes(x = week_day)) +
 ```{r, fig.keep="none"}
 
 # either use a graph to find out
-ggplot(okcupid, aes(x = week_day)) + 
+ggplot(okcupid, aes(x = week_day)) +
   geom_bar() +
   xlab("Week day") +
-  ylab("Count") + 
+  ylab("Count") +
   facet_wrap(~sex)
 
 # or a summary data frame
 
-okcupid %>% 
-  group_by(sex) %>% 
+okcupid %>%
+  group_by(sex) %>%
   count(week_day)
 ```
 

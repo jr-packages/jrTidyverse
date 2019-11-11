@@ -122,7 +122,9 @@ NULL
 #' \item{language}{Original language of the film}
 #' \item{country}{Country of release}
 #' \item{cast_total_facebook_likes}{Total number of facebook likes of the cast}
-#' \item{action, adventure, comedy, crime, drama, fantasy, sci-fi, thriller, romance, other}{Binary variables representing if movie was classified as belonging to that genre.}}
+#' \item{action, adventure, comedy, crime, drama, fantasy,
+#' sci-fi, thriller, romance, other}{Binary variables representing
+#'  if movie was classified as belonging to that genre.}}
 #'@references Credit: This data set was found of kaggle
 #'@keywords datasets
 #' @examples
