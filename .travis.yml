@@ -12,12 +12,6 @@ env:
   global:
     - ALLOWED_NOTES=1
 
-r_packages:
-  - drat
-
-r_github_packages:
-  - jumpingrivers/inteRgrate
-
 before_install:
   - sudo apt-get install -y libudunits2-dev libgdal-dev ghostscript
 
@@ -26,11 +20,7 @@ before_script:
   - bash test_deploy.sh && rm test_deploy.sh
 
 script:
-  - Rscript -e "inteRgrate::check_pkg()"
-  - Rscript -e "inteRgrate::check_r_filenames()"
-  - Rscript -e "inteRgrate::check_tidy_description()"
-  - Rscript -e "inteRgrate::check_lintr()"
-  - Rscript -e "inteRgrate::check_namespace()"
+  - Rscript -e "source('https://raw.githubusercontent.com/jr-packages/drat/master/script.R')"
 
 after_success:
   - wget https://raw.githubusercontent.com/jr-packages/drat/master/deploy.sh
