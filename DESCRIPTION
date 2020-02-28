@@ -1,7 +1,7 @@
 Type: Package
 Package: jrTidyverse
 Title: Introduction to the Tidyverse
-Version: 0.1.8
+Version: 0.1.9
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse
@@ -17,6 +17,7 @@ Imports:
     lubridate (>= 1.7.2),
     plotly,
     readr,
+    skimr,
     tibble (>= 1.4.2),
     tidyr,
     tidyverse,
@@ -27,7 +28,6 @@ Suggests:
     knitr,
     lintr,
     rmarkdown,
-    skimr,
     testthat
 VignetteBuilder: 
     knitr
