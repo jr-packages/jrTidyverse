@@ -1,5 +1,5 @@
 ---
-title: "lubridate Practical Solutions "
+title: "`r paste0(as.character(read.dcf('../DESCRIPTION', fields = 'Title')), ' - ', stringr::str_to_sentence(stringr::str_replace(knitr::current_input(), '([0-9])\\.Rmd', ' \\1')))`"
 author: "Jumping Rivers"
 output: pdf_document
 vignette: >
