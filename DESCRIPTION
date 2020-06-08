@@ -10,27 +10,27 @@ License: GPL-2
 Depends: 
     R (>= 3.3.0)
 Imports:
+    base64enc,
     dplyr (>= 0.7.4),
+    hrbrthemes,
+    htmltools,
+    lubridate (>= 1.7.2),
+    readr,
+    tibble (>= 1.4.2)
+Suggests:
     ggplot2,
     ggplot2movies,
-    hrbrthemes,
-    lubridate (>= 1.7.2),
-    plotly,
-    readr,
-    skimr,
-    tibble (>= 1.4.2),
-    tidyr,
-    tidyverse,
-    wordcloud,
-    htmltools,
-    base64enc
-Suggests: 
     gridExtra,
     gutenbergr,
     knitr,
     lintr,
+    plotly,
     rmarkdown,
-    testthat
+    skimr,
+    testthat,
+    tidyr,
+    tidyverse,
+    wordcloud
 VignetteBuilder: 
     knitr
 Remotes:
