@@ -1,7 +1,7 @@
 Type: Package
 Package: jrTidyverse
 Title: Introduction to the Tidyverse
-Version: 0.1.9
+Version: 0.1.10
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse
@@ -21,7 +21,9 @@ Imports:
     tibble (>= 1.4.2),
     tidyr,
     tidyverse,
-    wordcloud
+    wordcloud,
+    htmltools,
+    base64enc
 Suggests: 
     gridExtra,
     gutenbergr,
@@ -35,4 +37,4 @@ Remotes:
     jr-packages/jrData
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0

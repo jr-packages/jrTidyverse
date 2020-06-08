@@ -4,7 +4,9 @@
 \name{GoTRating}
 \alias{GoTRating}
 \title{Game of Thrones ratings}
-\format{A data frame}
+\format{
+A data frame
+}
 \description{
 Game of thrones TV ratings for every episode
 }

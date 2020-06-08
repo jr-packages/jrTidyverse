@@ -3,7 +3,7 @@ cache: packages
 
 env:
   global:
-    - ALLOWED_NOTES=1
+    - ALLOWED_NOTES=2 # additional for file size of animations
     - NO_IMPORTS=11
 
 notifications:
