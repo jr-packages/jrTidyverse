@@ -16,6 +16,7 @@ notifications:
 before_install:
   - tlmgr install fancyvrb units
   - sudo apt-get install -y ghostscript
+  - wget https://raw.githubusercontent.com/jr-packages/drat/master/options.R && cat options.R >> ~/.Rprofile.site && rm -f options.R
 
 before_script:
   - wget https://raw.githubusercontent.com/jr-packages/drat/master/test_deploy.sh
