@@ -8,7 +8,7 @@ Description: The package for the Jumping Rivers tidyverse
     course.
 License: GPL-2
 Depends: 
-    R (>= 3.3.0)
+    R (>= 3.5.0)
 Imports:
     base64enc,
     dplyr (>= 0.7.4),
