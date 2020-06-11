@@ -67,10 +67,10 @@ ggplot(df) +
     floor(61 / 10) * 10
     floor(119 / 10) * 10
     ```
-  We can use the `mutate()` function to create a new column that contains the persons
-  age (to the decade), i.e. 50, 60, 70, etc.  The `mutate()` function isn't directly in the notes, but it is relatively easy to understand. It creates a new column with the given name, based on manipulation of existing columns. So we could create this new column `decade`.
+  Use the `mutate()` function to create a new column that contains the persons
+  age (to the decade), i.e. 50, 60, 70, etc.
 
-    ```{r, echo = TRUE}
+    ```{r}
     okcupid %>%
       mutate(decade = floor(age / 10) * 10)
     ```
