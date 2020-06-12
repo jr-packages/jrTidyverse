@@ -1,38 +1,40 @@
 Type: Package
 Package: jrTidyverse
 Title: Introduction to the Tidyverse
-Version: 0.1.9
+Version: 0.1.10
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse
     course.
 License: GPL-2
 Depends: 
-    R (>= 3.3.0)
+    R (>= 3.5.0)
 Imports:
+    base64enc,
     dplyr (>= 0.7.4),
+    hrbrthemes,
+    htmltools,
+    lubridate (>= 1.7.2),
+    readr,
+    tibble (>= 1.4.2)
+Suggests:
     ggplot2,
     ggplot2movies,
-    hrbrthemes,
-    lubridate (>= 1.7.2),
-    plotly,
-    readr,
-    skimr,
-    tibble (>= 1.4.2),
-    tidyr,
-    tidyverse,
-    wordcloud
-Suggests: 
     gridExtra,
     gutenbergr,
     knitr,
     lintr,
+    plotly,
     rmarkdown,
-    testthat
+    skimr,
+    testthat,
+    tidyr,
+    tidyverse,
+    wordcloud
 VignetteBuilder: 
     knitr
 Remotes:
     jr-packages/jrData
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
