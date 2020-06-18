@@ -1,7 +1,7 @@
 Type: Package
 Package: jrTidyverse
 Title: Introduction to the Tidyverse
-Version: 0.1.10
+Version: 0.1.11
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse
@@ -11,7 +11,7 @@ Depends:
     R (>= 3.5.0)
 Imports:
     base64enc,
-    dplyr (>= 0.7.4),
+    dplyr (>= 1.0.0),
     hrbrthemes,
     htmltools,
     lubridate (>= 1.7.2),
