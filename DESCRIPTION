@@ -1,7 +1,7 @@
 Type: Package
 Package: jrTidyverse
-Title: Introduction to the Tidyverse
-Version: 0.1.11
+Title: Jumping Rivers: Getting to Grips with the Tidyverse
+Version: 0.2.0
 Author: Jumping Rivers
 Maintainer: Jumping Rivers <colin@jumpingrivers.com>
 Description: The package for the Jumping Rivers tidyverse
@@ -37,4 +37,4 @@ Remotes:
     jr-packages/jrData
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
