@@ -2,7 +2,7 @@
 
   * Change title
 
-## 0.1.*
+## jrTidyverse 0.1.*
 
   * Remove notes
   * Remove odd `x = 1` boxplot example
